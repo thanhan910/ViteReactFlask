@@ -5,7 +5,7 @@ A small web app build with React as front-end and Flask as back-end. Created fro
 
 I used VSCode on Windows 11 to develop this app.
 
-1. Create a new React app with Vite
+1. \[Front-end\] Create a new React app with Vite
 
 Reference: https://vitejs.dev/guide/
 
@@ -22,7 +22,7 @@ cd vite-frontend
 npm install
 ```
 
-2. Create a Flask app
+2. \[Back-end\] Create a Flask app
 
 Create a new folder called `flask-backend` and create a new file called `app.py` inside it.
 
@@ -39,7 +39,7 @@ I also added requirements.txt so that when I enabled the virtual environment, I 
 pip install -r requirements.txt
 ```
 
-3. Create a virtual environment for Flask backend
+3. \[Back-end\] Create a virtual environment for Flask backend
 
 Create a virtual environment called `.venv` inside the `flask-backend` folder.
 ```bash
@@ -52,15 +52,23 @@ Then I enabled the virtual environment and installed the dependencies.
 pip install -r requirements.txt
 ```
 
-4. Create a proxy for the React app
+4. \[Front-end\] Create a proxy for the React app
 
 In the `vite.config.js` file in the `vite-frontend` folder, I added the following code to it:
 ```js
-export default {
+export default defineConfig({
+  plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:5000'
-    }
-  }
-}
+      '/api': {
+        target: 'http://127.0.0.1:5000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
+})
 ```
+
+Reference: https://vitejs.dev/config/
+
