@@ -180,3 +180,10 @@ and http://localhost:5000/time to see the current time returned in JSON.
 ### Further notices:
 - This app is only in development mode, not in production mode yet. To deploy the app to production, refer to [How to Deploy a React + Flask Project](https://blog.miguelgrinberg.com/post/how-to-deploy-a-react--flask-project) by Miguel Grinberg to learn how to do it.
 - When I developed the app using `create-react-app`, sometimes I cannot setup the proxy server to work. The fetch() function kept routing to localhost:3000 instead of localhost:5000. 
+- There is another way to integrate Vite with Flask, see:
+    - https://vitejs.dev/guide/backend-integration.html
+    - https://github.com/vitejs/awesome-vite#integrations-with-backends
+    - https://github.com/abilian/flask-vite
+
+- however, I have not tried it yet. 
+
