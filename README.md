@@ -96,6 +96,8 @@ export default defineConfig({
 })
 ```
 
+(Note: the target must be set to 'http://127.0.0.1:5000' instead of 'http://localhost:5000' in order for the proxy server to work. I'm not sure why.)
+
 Reference: https://vitejs.dev/config/
 
 5. \[Front-end\] Create a React component to fetch data from the Flask backend
@@ -149,3 +151,32 @@ or
 ```bash
 python app.py
 ```
+
+## Demo
+
+The web app should be running at http://localhost:5173/, unless specified otherwise by Vite.
+
+Enter a sentence in the text box and click the button to see the sentiment result.
+
+![Demonstration of web app](DEMO\web-app.png)
+
+If you want to see how the backend works, go to http://localhost:5000/ to see the backend index page.
+
+![Alt text](DEMO\backend-index.png)
+
+and http://localhost:5000/time to see the current time returned in JSON.
+
+![Alt text](DEMO\backend-time.png)
+
+## References, resources, and further notices
+
+### References and resources
+
+- [How To Create a React + Flask Project](https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project) by Miguel Grinberg
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/guide/)
+- [Flask](https://flask.palletsprojects.com/en/)
+
+### Further notices:
+- This app is only in development mode, not in production mode yet. To deploy the app to production, refer to [How to Deploy a React + Flask Project](https://blog.miguelgrinberg.com/post/how-to-deploy-a-react--flask-project) by Miguel Grinberg to learn how to do it.
+- When I developed the app using `create-react-app`, sometimes I cannot setup the proxy server to work. The fetch() function kept routing to localhost:3000 instead of localhost:5000. 
