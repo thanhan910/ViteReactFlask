@@ -1,5 +1,31 @@
 # ViteReactFlask
+
 A small web app build with React as front-end and Flask as back-end. Created frontend React app with Vite.
+
+
+## Installation
+1. First clone this repository
+
+2. \[Front-end\] Install the dependencies for the React app
+```bash
+cd vite-frontend
+npm install
+```
+
+3. \[Back-end\] Install the dependencies for the Flask app
+
+Navigate to the back-end folder, create a virtual environment, activate it, and install the dependencies.
+
+```bash
+cd flask-backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+4. Run the app
+
+Refer to [How to run the app](#how-to-run-the-app) for details.
 
 ## My development process
 
@@ -75,3 +101,51 @@ Reference: https://vitejs.dev/config/
 5. \[Front-end\] Create a React component to fetch data from the Flask backend
 Refer to `src/App.jsx`, `` for details.
 
+6. Run the web app
+
+Refer to [How to run the app](#how-to-run-the-app) for details.
+
+## How to run the app
+
+### Front-end: React application
+
+Navigate to the front-end folder 
+```bash
+cd vite-frontend
+```
+
+Run the following command to start the app
+```
+npm run dev
+```
+
+### Back-end: Flask application
+
+
+Navigate to the back-end folder:
+```bash
+cd flask-backend
+```
+
+
+If not already, enable the virtual environment:
+```bash
+.venv\Scripts\activate
+```
+
+Run the following command to start the app:
+```bash
+flask --app app.py run
+```
+or
+
+```bash
+flask run
+```
+(this command will automatically run the Flask application since we named the main python file as `app.py`)
+
+or
+
+```bash
+python app.py
+```
