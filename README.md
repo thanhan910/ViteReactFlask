@@ -72,3 +72,6 @@ export default defineConfig({
 
 Reference: https://vitejs.dev/config/
 
+5. \[Front-end\] Create a React component to fetch data from the Flask backend
+Refer to `src/App.jsx`, `` for details.
+
