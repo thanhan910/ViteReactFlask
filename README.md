@@ -158,15 +158,15 @@ The web app should be running at http://localhost:5173/, unless specified otherw
 
 Enter a sentence in the text box and click the button to see the sentiment result.
 
-![Demonstration of web app](DEMO\web-app.png)
+![Demonstration of web app](DEMO/web-app.png)
 
 If you want to see how the backend works, go to http://localhost:5000/ to see the backend index page.
 
-![Alt text](DEMO\backend-index.png)
+![Demonstration of backend index](DEMO/backend-index.png)
 
 and http://localhost:5000/time to see the current time returned in JSON.
 
-![Alt text](DEMO\backend-time.png)
+![Demonstration of backend /time endpoint](DEMO/backend-time.png)
 
 ## References, resources, and further notices
 
